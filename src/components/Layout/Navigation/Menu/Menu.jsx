@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 // styled components
 import { List, ListItem } from './Menu.styles';
+import { CustomLink } from '../../../Link/Link.styles';
 import { StaticImage } from 'gatsby-plugin-image';
 
 // hooks
@@ -17,7 +17,7 @@ function Menu() {
 	const categoriesList = categories.map(category => {
 		return (
 			<ListItem key={category.id}>
-				<Link to={category.slug}>{`${capitalize(category.name)}s`}</Link>
+				<CustomLink to={`/${category.slug}`}>{`${capitalize(category.name)}s`}</CustomLink>
 			</ListItem>
 		);
 	});

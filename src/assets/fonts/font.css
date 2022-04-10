@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Supermercado";
+    font-display: fallback;
+    src: url("./Supermercado_One/SupermercadoOne-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu_Mono";
+    font-display: fallback;
+    src: url("./Ubuntu_Mono/UbuntuMono-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}

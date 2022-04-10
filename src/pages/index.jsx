@@ -22,9 +22,6 @@ export const query = graphql`
 			edges {
 				node {
 					description
-					image {
-						url
-					}
 					name
 					permalink
 					price {
@@ -34,6 +31,9 @@ export const query = graphql`
 						raw
 					}
 					sku(formatString: "")
+					image {
+						url
+					}
 				}
 			}
 		}

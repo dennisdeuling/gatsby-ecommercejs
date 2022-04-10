@@ -12,9 +12,10 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
 		{
-			resolve: '@chec/gatsby-source-chec',
+			resolve: `@chec/gatsby-source-chec`,
 			options: {
-				publicKey: process.env.CHEC_PUBLIC_KEY
+				publicKey: process.env.CHEC_PUBLIC_KEY,
+				downloadImageAssets: true
 			}
 		},
 		{

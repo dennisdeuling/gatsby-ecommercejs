@@ -3,8 +3,12 @@ import React from 'react';
 // components
 import ProductCard from '../ProductCard/ProductCard';
 
+// styles
+import { ProductListWrapper } from './ProductList.styles';
+
 function ProductList(props) {
 	const { products } = props;
+
 	const productList = products.map(product => {
 		return (
 			<ProductCard
@@ -14,10 +18,11 @@ function ProductList(props) {
 				description={product.description}
 				price={product.price}
 				sku={product.sku}
+				link={product.permalink}
 			/>
 		);
 	});
-	return <div>{productList}</div>;
+	return <ProductListWrapper>{productList}</ProductListWrapper>;
 }
 
 export default ProductList;
