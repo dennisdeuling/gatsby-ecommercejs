@@ -8,4 +8,16 @@ function capitalize(string) {
 	return newString;
 }
 
-export { capitalize };
+function formatPriceEUR(price) {
+	if (typeof price === 'number') {
+		return new Intl.NumberFormat('de-DE', {
+			style: 'currency',
+			currency: 'EUR',
+			minimumFractionDigits: 0
+		}).format(price);
+	} else {
+		return 'Please format the price as number';
+	}
+}
+
+export { capitalize, formatPriceEUR };

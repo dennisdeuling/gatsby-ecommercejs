@@ -14,7 +14,7 @@ module.exports = {
 		{
 			resolve: `@chec/gatsby-source-chec`,
 			options: {
-				publicKey: process.env.CHEC_PUBLIC_KEY,
+				publicKey: process.env.GATSBY_CHEC_PUBLIC_KEY,
 				downloadImageAssets: true
 			}
 		},
@@ -29,6 +29,13 @@ module.exports = {
 			options: {
 				name: `images`,
 				path: `${__dirname}/src/assets/images/`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `icons`,
+				path: `${__dirname}/src/assets/icons/`
 			}
 		}
 	]

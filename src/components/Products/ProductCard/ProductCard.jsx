@@ -2,25 +2,25 @@ import React from 'react';
 
 // styles
 import {
-	ProductDescription,
-	ProductHeadline,
-	ProductImage,
-	ProductWrapper
+	ProductCardDescription,
+	ProductCardHeadline,
+	ProductCardImage,
+	ProductCardWrapper
 } from './ProductCard.styles';
 import { CustomLink } from '../../Link/Link.styles';
 
 function ProductCard(props) {
-	const { image, headline, description, price, link } = props;
+	const { image, headline, description, link } = props;
 
 	return (
-		<ProductWrapper>
+		<ProductCardWrapper>
 			<CustomLink to={`/${link}`}>
-				<ProductImage src={image} alt={headline} />
-				<ProductHeadline>{headline}</ProductHeadline>
-				<ProductDescription dangerouslySetInnerHTML={{ __html: description }} />
+				<ProductCardImage src={image} alt={headline} />
+				<ProductCardHeadline>{headline}</ProductCardHeadline>
+				<ProductCardDescription dangerouslySetInnerHTML={{ __html: description }} />
 				{/*<p>{price}</p>*/}
 			</CustomLink>
-		</ProductWrapper>
+		</ProductCardWrapper>
 	);
 }
 

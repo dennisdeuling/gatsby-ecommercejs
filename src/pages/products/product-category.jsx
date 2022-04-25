@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import Layout from '../../components/Layout/Layout';
 import ProductList from '../../components/Products/ProductList/ProductList';
 
-function ProductCategory({ data }) {
+function ProductCategoryPage({ data }) {
 	const products = data.allChecProduct.edges.map(product => product.node);
 
 	return (
@@ -46,4 +46,4 @@ export const query = graphql`
 	}
 `;
 
-export default ProductCategory;
+export default ProductCategoryPage;

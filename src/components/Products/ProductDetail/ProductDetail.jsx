@@ -1,7 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function ProductDetail() {
-	return <div></div>;
+// helper function
+import { formatPriceEUR } from '../../../helper_functions/helper_functions';
+
+// components
+import AddToCart from './AddToCartButton/AddToCart';
+import AddQuantity from './AddQuantity/AddQuantity';
+
+// hooks
+// import useCart from '../../../hooks/useCart';
+
+// styles
+import {
+	ProductDetailDescription,
+	ProductDetailHeadline,
+	ProductDetailImage,
+	ProductDetailWrapper,
+	ProductDetailTextWrapper,
+	ProductDetailButtons,
+	ProductDetailPrice
+} from './ProductDetail.styles';
+
+function ProductDetail({ product }) {
+	const [quantity, setQuantity] = useState();
+
+	const handleQuantity = quantity => {
+		setQuantity(quantity);
+	};
+
+	return (
+		<ProductDetailWrapper>
+			<ProductDetailImage src={product.image.url} />
+			<ProductDetailTextWrapper>
+				<ProductDetailHeadline>{product.name}</ProductDetailHeadline>
+				<ProductDetailDescription dangerouslySetInnerHTML={{ __html: product.description }} />
+				<ProductDetailButtons>
+					<AddQuantity handleQuantity={handleQuantity} />
+					<ProductDetailPrice>{`${formatPriceEUR(
+						quantity * product.price.raw
+					)}`}</ProductDetailPrice>
+					<AddToCart />
+				</ProductDetailButtons>
+			</ProductDetailTextWrapper>
+		</ProductDetailWrapper>
+	);
 }
 
 export default ProductDetail;

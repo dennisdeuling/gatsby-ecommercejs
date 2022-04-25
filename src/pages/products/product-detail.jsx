@@ -1,9 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-function ProductDetail({ data }) {
-	console.log(data);
-	return <div></div>;
+// components
+import Layout from '../../components/Layout/Layout';
+import ProductDetail from '../../components/Products/ProductDetail/ProductDetail';
+
+function ProductDetailPage({ data }) {
+	const product = data.checProduct;
+
+	return (
+		<Layout>
+			<ProductDetail product={product} />
+		</Layout>
+	);
 }
 
 export const query = graphql`
@@ -29,4 +38,4 @@ export const query = graphql`
 	}
 `;
 
-export default ProductDetail;
+export default ProductDetailPage;
