@@ -18,6 +18,7 @@ function ProductDetailPage({ data }) {
 export const query = graphql`
 	query ($id: String!) {
 		checProduct(active: { eq: true }, id: { eq: $id }) {
+			id
 			name
 			description
 			permalink

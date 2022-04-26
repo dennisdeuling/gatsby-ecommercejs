@@ -1,5 +1,8 @@
 import React from 'react';
 
+// context
+import CartProvider from '../../hooks/CartContext';
+
 // components
 import Navigation from './Navigation/Navigation';
 import Footer from './Footer/Footer';
@@ -11,9 +14,11 @@ import { GlobalStyle } from './GlobalStyle';
 function Layout({ children }) {
 	return (
 		<React.Fragment>
-			<GlobalStyle />
-			<Navigation />
-			<main>{children}</main>
+			<CartProvider>
+				<GlobalStyle />
+				<Navigation />
+				<main>{children}</main>
+			</CartProvider>
 			<Footer />
 		</React.Fragment>
 	);

@@ -20,9 +20,11 @@ import {
 	ProductDetailButtons,
 	ProductDetailPrice
 } from './ProductDetail.styles';
+import { useUpdateCart } from '../../../hooks/CartContext';
 
 function ProductDetail({ product }) {
 	const [quantity, setQuantity] = useState();
+	const handleAddToCart = useUpdateCart();
 
 	const handleQuantity = quantity => {
 		setQuantity(quantity);
@@ -39,7 +41,7 @@ function ProductDetail({ product }) {
 					<ProductDetailPrice>{`${formatPriceEUR(
 						quantity * product.price.raw
 					)}`}</ProductDetailPrice>
-					<AddToCart />
+					<AddToCart handleAddToCart={() => handleAddToCart('add', product.id, quantity)} />
 				</ProductDetailButtons>
 			</ProductDetailTextWrapper>
 		</ProductDetailWrapper>
