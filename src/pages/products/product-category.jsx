@@ -10,7 +10,6 @@ function ProductCategoryPage({ data }) {
 
 	return (
 		<Layout>
-			<div>Hello world!</div>
 			<ProductList products={products} />
 		</Layout>
 	);

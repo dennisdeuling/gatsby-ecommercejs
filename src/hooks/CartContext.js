@@ -58,7 +58,7 @@ function CartProvider({ children }) {
 		}
 	};
 
-	console.log(cart);
+	// console.log(cart);
 
 	return (
 		<CartContext.Provider value={cart}>
