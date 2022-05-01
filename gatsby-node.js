@@ -42,4 +42,10 @@ exports.createPages = async ({ actions, graphql }) => {
 			context: { category: product.node.categories[0].slug }
 		});
 	});
+
+	actions.createPage({
+		path: `/cart`,
+		component: require.resolve('./src/pages/checkout/cart-overview.jsx'),
+		context: {}
+	});
 };

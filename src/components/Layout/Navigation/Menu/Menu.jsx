@@ -24,30 +24,31 @@ function Menu() {
 		);
 	});
 
-	console.log(cart);
 	return (
 		<nav>
 			<List>
 				{categoriesList}
 				<ListItem>
-					{cart?.total_items > 0 && (
-						<Badge>
-							{cart.total_items > 0 && cart.total_items < 10
-								? `0${cart.total_items}`
-								: cart.total_items}
-						</Badge>
-					)}
-					{cart?.line_items.length === 0 ? (
-						<StaticImage
-							src="../../../../assets/icons/empty_shopping_cart_black_24dp.svg"
-							alt="Empty shopping-cart"
-						/>
-					) : (
-						<StaticImage
-							src="../../../../assets/icons/filled_shopping_cart_black_24dp.svg"
-							alt="Filled shopping-cart"
-						/>
-					)}
+					<CustomLink to="/cart">
+						{cart?.total_items > 0 && (
+							<Badge>
+								{cart.total_items > 0 && cart.total_items < 10
+									? `0${cart.total_items}`
+									: cart.total_items}
+							</Badge>
+						)}
+						{cart?.line_items.length === 0 ? (
+							<StaticImage
+								src="../../../../assets/icons/empty_shopping_cart_black_24dp.svg"
+								alt="Empty shopping-cart"
+							/>
+						) : (
+							<StaticImage
+								src="../../../../assets/icons/filled_shopping_cart_black_24dp.svg"
+								alt="Filled shopping-cart"
+							/>
+						)}
+					</CustomLink>
 				</ListItem>
 			</List>
 		</nav>
