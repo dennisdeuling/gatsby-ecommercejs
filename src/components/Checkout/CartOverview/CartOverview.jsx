@@ -7,8 +7,14 @@ import { formatPriceEUR } from '../../../helper_functions/helper_functions';
 import ProductTable from './ProductTable/ProductTable';
 
 // styled components
-import { CustomLink } from '../../Link/Link.styles';
-import { Table, TableData, TableHead, TableWrapper } from './CartOverview.styles';
+import {
+	CheckoutBtn,
+	Table,
+	TableData,
+	TableHead,
+	TableWrapper,
+	WrapperBtn
+} from './CartOverview.styles';
 
 // hooks
 import { useCart } from '../../../hooks/CartContext';
@@ -46,8 +52,10 @@ function CartOverview() {
 						</tr>
 					</tfoot>
 				</Table>
+				<WrapperBtn>
+					<CheckoutBtn to="/checkout">Proceed to checkout</CheckoutBtn>
+				</WrapperBtn>
 			</TableWrapper>
-			<CustomLink to="/checkout">Proceed to checkout</CustomLink>
 		</React.Fragment>
 	);
 }
