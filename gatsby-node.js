@@ -48,4 +48,10 @@ exports.createPages = async ({ actions, graphql }) => {
 		component: require.resolve('./src/pages/checkout/cart-overview.jsx'),
 		context: {}
 	});
+
+	actions.createPage({
+		path: `/checkout`,
+		component: require.resolve('./src/pages/checkout/checkout.jsx'),
+		context: {}
+	});
 };

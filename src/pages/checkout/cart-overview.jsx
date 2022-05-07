@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import CartOverview from '../../components/Checkout/CartOverview/CartOverview';
 
-function CheckoutPage() {
+function CartOverviewPage() {
 	return (
 		<Layout>
 			<CartOverview />
@@ -12,4 +12,4 @@ function CheckoutPage() {
 	);
 }
 
-export default CheckoutPage;
+export default CartOverviewPage;
