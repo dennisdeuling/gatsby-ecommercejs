@@ -20,6 +20,7 @@ function Checkout({ ...props }) {
 	const [address, setAddress] = useState(null);
 	const [isChecked, setIsChecked] = useState(false);
 	const [checkoutData, setCheckoutData] = useState(null);
+	const [shippingMethodId, setShippingMethodId] = useState(null);
 
 	useEffect(() => {
 		if (cart) {
@@ -30,7 +31,7 @@ function Checkout({ ...props }) {
 		}
 	}, [cart]);
 
-	const handleOnChange = (name, value, typeOfAddress) => {
+	const handleOnChangeAddress = (name, value, typeOfAddress) => {
 		setAddress(prevState => {
 			return {
 				...prevState,
@@ -40,6 +41,10 @@ function Checkout({ ...props }) {
 				}
 			};
 		});
+	};
+
+	const handleOnChangeShipping = id => {
+		setShippingMethodId(id);
 	};
 
 	const handleCheckbox = event => {
@@ -93,14 +98,14 @@ function Checkout({ ...props }) {
 		}
 	}
 
-	console.log(checkoutData);
+	console.log(address);
 	return (
 		<Wrapper>
 			<div>
 				<h1>Addresses</h1>
 				<fieldset>
 					<legend>Your Billing address:</legend>
-					<AddressForm handleOnChange={handleOnChange} typeOfAddress="billing" />
+					<AddressForm handleOnChangeAddress={handleOnChangeAddress} typeOfAddress="billing" />
 				</fieldset>
 				<InputField
 					label="Add a different Shipping address"
@@ -110,7 +115,7 @@ function Checkout({ ...props }) {
 				{isChecked && (
 					<fieldset>
 						<legend>Your Shipping address:</legend>
-						<AddressForm handleOnChange={handleOnChange} typeOfAddress="shipping" />
+						<AddressForm handleOnChangeAddress={handleOnChangeAddress} typeOfAddress="shipping" />
 					</fieldset>
 				)}
 			</div>
@@ -118,7 +123,10 @@ function Checkout({ ...props }) {
 				<h1>Shipping</h1>
 				<fieldset>
 					<legend>Your Shipping country:</legend>
-					<SelectField methods={checkoutData?.shipping_methods} />
+					<SelectField
+						methods={checkoutData?.shipping_methods}
+						handleOnChange={handleOnChangeShipping}
+					/>
 				</fieldset>
 				<fieldset>
 					<legend>Your Payment:</legend>
