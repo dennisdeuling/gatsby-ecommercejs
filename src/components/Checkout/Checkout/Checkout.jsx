@@ -180,7 +180,6 @@ function Checkout({ ...props }) {
 	console.log(address);
 	return (
 		<form onSubmit={event => captureOrder(event)}>
-			{/*<Wrapper>*/}
 			<div>
 				<h1>Addresses</h1>
 				<fieldset>
@@ -210,21 +209,12 @@ function Checkout({ ...props }) {
 				)}
 			</div>
 			<div>
-				<h1>Shipping</h1>
-				{/*<fieldset>*/}
-				{/*	<legend>Your Shipping country:</legend>*/}
-				{/*	<SelectField*/}
-				{/*		methods={checkoutData?.shipping_methods}*/}
-				{/*		handleOnChange={handleOnChangeShipping}*/}
-				{/*	/>*/}
-				{/*</fieldset>*/}
 				<fieldset>
 					<legend>Your Payment:</legend>
 					<CardElement />
 				</fieldset>
 				<button type="submit">Order</button>
 			</div>
-			{/*</Wrapper>*/}
 		</form>
 	);
 }
