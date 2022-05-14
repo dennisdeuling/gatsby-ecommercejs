@@ -13,12 +13,11 @@ function AddressForm({ ...props }) {
 	return (
 		<React.Fragment>
 			<InputField label="Firstname" type="text" handleOnChange={handleOnChangeAddress} />
-			<InputField label="Secondname" type="text" handleOnChange={handleOnChangeAddress} />
+			<InputField label="Lastname" type="text" handleOnChange={handleOnChangeAddress} />
 			<InputField label="Email" type="text" handleOnChange={handleOnChangeAddress} />
-			<InputField label="Street and Nr." type="text" handleOnChange={handleOnChangeAddress} />
+			<InputField label="Street" type="text" handleOnChange={handleOnChangeAddress} />
 			<InputField label="Zipcode" type="text" handleOnChange={handleOnChangeAddress} />
 			<InputField label="City" type="text" handleOnChange={handleOnChangeAddress} />
-			<InputField label="Country" type="text" handleOnChange={handleOnChangeAddress} />
 		</React.Fragment>
 	);
 }

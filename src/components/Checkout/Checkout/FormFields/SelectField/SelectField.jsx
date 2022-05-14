@@ -1,8 +1,5 @@
 import React from 'react';
 
-// helpers
-import { formatPriceEUR } from '../../../../../helper_functions/helper_functions';
-
 function SelectField({ ...props }) {
 	const { methods } = props;
 
@@ -11,7 +8,7 @@ function SelectField({ ...props }) {
 
 		if (value !== 'choose') {
 			const method = methods.filter(shippingMethod => shippingMethod.description === value);
-			props.handleOnChange(method[0].id);
+			props.handleOnChange(method, props.typeOfAddress);
 		} else {
 			return null;
 		}
@@ -23,7 +20,7 @@ function SelectField({ ...props }) {
 		shippingMethods = methods.map(method => {
 			return (
 				<option key={method.id} value={method.description}>
-					{method.description} - {formatPriceEUR(method.price.raw)}
+					{method.description}
 				</option>
 			);
 		});
@@ -31,10 +28,10 @@ function SelectField({ ...props }) {
 
 	return (
 		<React.Fragment>
-			<label htmlFor="shipping-method">Choose your shipping Country:</label>
+			<label htmlFor="shipping-method">Country</label>
 			<select name="shipping-method" id="shipping-method" onChange={event => handleOnSelect(event)}>
 				<option key="choose" value="choose">
-					--Please choose an option--
+					-- Country --
 				</option>
 				{shippingMethods}
 			</select>
