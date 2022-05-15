@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
-import Commerce from '@chec/commerce.js';
-const commerce = new Commerce(`${process.env.GATSBY_CHEC_PUBLIC_KEY}`);
+
+// ecommerce settings
+import commerce from '../ecommerce_settings/ecommcejs';
 
 // contexts
 const CartContext = React.createContext();
