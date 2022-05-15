@@ -10,7 +10,7 @@ import useMenuQuery from '../../../../hooks/useMenuQuery';
 import { useCart } from '../../../../hooks/CartContext';
 
 // helper functions
-import { capitalize } from '../../../../helper_functions/helper_functions';
+import { capitalize } from '../../../../helpers/helpers';
 
 function Menu() {
 	const categories = useMenuQuery();

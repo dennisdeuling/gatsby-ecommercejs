@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // helper function
-import { formatPriceEUR } from '../../../helper_functions/helper_functions';
+import { formatPriceEUR } from '../../../helpers/helpers';
 
 // components
 import AddToCart from './AddToCartButton/AddToCart';

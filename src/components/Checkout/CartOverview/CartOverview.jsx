@@ -1,7 +1,7 @@
 import React from 'react';
 
 // helpers
-import { formatPriceEUR } from '../../../helper_functions/helper_functions';
+import { formatPriceEUR } from '../../../helpers/helpers';
 
 // components
 import ProductTable from './ProductTable/ProductTable';
