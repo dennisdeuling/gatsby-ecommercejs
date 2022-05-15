@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { navigate } from 'gatsby';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 
 // components
@@ -65,7 +66,7 @@ function Checkout({ ...props }) {
 	// Create a function that can be called when a "complete order" button is clicked
 	const captureOrder = async event => {
 		event.preventDefault();
-		let billing, shipping, customer, fulfillment;
+		let billing, shipping, customer, fulfillment, order;
 
 		if (address.billing) {
 			const {
@@ -155,29 +156,24 @@ function Checkout({ ...props }) {
 		};
 
 		try {
-			// Use a checkout token ID generated that was generated earlier, and any order details that may have been collected
-			// on this page. Note that Commerce.js checkout tokens may already have all the information saved against them to
-			// capture an order, so this extra detail may be optional.
-			const order = await commerce.checkout.capture(checkoutData.id, {
+			order = await commerce.checkout.capture(checkoutData.id, {
 				customer: customer,
 				billing: billing,
 				shipping: shipping ? shipping : billing,
 				fulfillment: fulfillment,
 				payment: payment
 			});
-
-			// If we get here, the order has been successfully captured and the order detail is part of the `order` variable
-			console.log(order);
 		} catch (response) {
-			// There was an issue with capturing the order with Commerce.js
 			console.log(response);
 			alert(response.message);
 		} finally {
 			// Any loading state can be removed here.
+			await navigate('/purchase', {
+				state: { order }
+			});
 		}
 	};
 
-	console.log(address);
 	return (
 		<form onSubmit={event => captureOrder(event)}>
 			<div>

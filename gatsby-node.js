@@ -54,4 +54,10 @@ exports.createPages = async ({ actions, graphql }) => {
 		component: require.resolve('./src/pages/checkout/checkout.jsx'),
 		context: {}
 	});
+
+	actions.createPage({
+		path: `/purchase`,
+		component: require.resolve('./src/pages/checkout/purchase-success.jsx'),
+		context: {}
+	});
 };
