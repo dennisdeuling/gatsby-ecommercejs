@@ -31,4 +31,5 @@ export const AddAndRemoveButton = styled.button`
 	border-radius: 2px;
 	border: 0;
 	box-shadow: none;
+	cursor: pointer;
 `;
