@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 export const ProductCardWrapper = styled.section`
-	//display: flex;
-	//justify-content: center;
-	//align-content: center;
-	//justify-items: center;
+	justify-self: center;
 	width: 250px;
 	padding: 0 15px;
 `;
@@ -18,12 +15,11 @@ export const ProductCardImage = styled.img`
 export const ProductCardHeadline = styled.h1`
 	font-family: 'Supermercado', sans-serif;
 	text-align: center;
-	font-size: 30px;
+	font-size: 2.5em;
 `;
 
 export const ProductCardDescription = styled.p`
-	font-family: 'Ubuntu', sans-serif;
 	text-align: left;
-	font-size: 20px;
+	font-size: 1.3em;
 	line-height: 130%;
 `;

@@ -18,7 +18,6 @@ function ProductCard(props) {
 				<ProductCardImage src={image} alt={headline} />
 				<ProductCardHeadline>{headline}</ProductCardHeadline>
 				<ProductCardDescription dangerouslySetInnerHTML={{ __html: description }} />
-				{/*<p>{price}</p>*/}
 			</CustomLink>
 		</ProductCardWrapper>
 	);

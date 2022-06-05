@@ -20,6 +20,7 @@ function Layout({ children }) {
 				<main>{children}</main>
 			</CartProvider>
 			<Footer />
+			<GlobalStyle />
 		</React.Fragment>
 	);
 }

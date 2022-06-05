@@ -25,7 +25,6 @@ export const QuantityForm = styled.input`
 
 export const AddAndRemoveButton = styled.button`
 	padding: 1px 10px;
-	font-family: 'Ubuntu', sans-serif;
 	background-color: darkgray;
 	font-size: 25px;
 	color: white;

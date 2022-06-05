@@ -9,6 +9,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
 	margin: 5px;
+	font-size: 1.2em;
 `;
 
 export const Badge = styled.div`
@@ -18,8 +19,7 @@ export const Badge = styled.div`
 	margin: 0 0 30px 10px;
 	background-color: darkorange;
 	border-radius: 50%;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 18px;
+	font-size: 1em;
 	text-align: center;
 	color: white;
 `;

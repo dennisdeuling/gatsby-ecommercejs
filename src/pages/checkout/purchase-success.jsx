@@ -2,6 +2,7 @@ import React from 'react';
 
 // components
 import Layout from '../../components/Layout/Layout';
+import { Wrapper } from '../../components/Checkout/Checkout/Checkout.styles';
 
 function PurchaseSuccessPage({ location }) {
 	const { order } = location.state;
@@ -9,8 +10,12 @@ function PurchaseSuccessPage({ location }) {
 	return (
 		<div>
 			<Layout>
-				<h1>Thank you {order.billing.name} for your purchase!</h1>
-				<h3>You get an email with the order details!</h3>
+				<Wrapper>
+					<h1>Thank you {order.billing.name} for your purchase!</h1>
+				</Wrapper>
+				<Wrapper>
+					<h3>You get an email with the order details!</h3>
+				</Wrapper>
 			</Layout>
 		</div>
 	);

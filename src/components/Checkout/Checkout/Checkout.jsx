@@ -11,6 +11,7 @@ import SelectField from './FormFields/SelectField/SelectField';
 import { useCart } from '../../../hooks/CartContext';
 
 // styles
+import { Wrapper, Fieldset, Legend } from './Checkout.styles';
 
 function Checkout({ ...props }) {
 	const { commerce } = props;
@@ -175,43 +176,45 @@ function Checkout({ ...props }) {
 	};
 
 	return (
-		<form onSubmit={event => captureOrder(event)}>
-			<div>
-				<h1>Addresses</h1>
-				<fieldset>
-					<legend>Your Billing address:</legend>
-					<AddressForm handleOnChangeAddress={handleOnChangeAddress} typeOfAddress="billing" />
-					<SelectField
-						methods={checkoutData?.shipping_methods}
-						typeOfAddress="billing"
-						handleOnChange={handleOnChangeShipping}
-					/>
-				</fieldset>
-				<InputField
-					label="Add a different Shipping address"
-					type="checkbox"
-					handleCheckbox={handleCheckbox}
-				/>
-				{isChecked && (
-					<fieldset>
-						<legend>Your Shipping address:</legend>
-						<AddressForm handleOnChangeAddress={handleOnChangeAddress} typeOfAddress="shipping" />
+		<Wrapper>
+			<form onSubmit={event => captureOrder(event)}>
+				<div>
+					<h1>Addresses</h1>
+					<Fieldset>
+						<Legend>Your Billing address:</Legend>
+						<AddressForm handleOnChangeAddress={handleOnChangeAddress} typeOfAddress="billing" />
 						<SelectField
-							typeOfAddress="shipping"
 							methods={checkoutData?.shipping_methods}
+							typeOfAddress="billing"
 							handleOnChange={handleOnChangeShipping}
 						/>
-					</fieldset>
-				)}
-			</div>
-			<div>
-				<fieldset>
-					<legend>Your Payment:</legend>
-					<CardElement />
-				</fieldset>
-				<button type="submit">Order</button>
-			</div>
-		</form>
+					</Fieldset>
+					<InputField
+						label="Add a different Shipping address"
+						type="checkbox"
+						handleCheckbox={handleCheckbox}
+					/>
+					{isChecked && (
+						<Fieldset>
+							<Legend>Your Shipping address:</Legend>
+							<AddressForm handleOnChangeAddress={handleOnChangeAddress} typeOfAddress="shipping" />
+							<SelectField
+								typeOfAddress="shipping"
+								methods={checkoutData?.shipping_methods}
+								handleOnChange={handleOnChangeShipping}
+							/>
+						</Fieldset>
+					)}
+				</div>
+				<div>
+					<Fieldset>
+						<Legend>Your Payment:</Legend>
+						<CardElement />
+					</Fieldset>
+					<button type="submit">Order</button>
+				</div>
+			</form>
+		</Wrapper>
 	);
 }
 

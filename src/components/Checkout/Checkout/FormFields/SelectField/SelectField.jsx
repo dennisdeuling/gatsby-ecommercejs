@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Label, Option, Select, Wrapper } from './SelectField.styles';
+
 function SelectField({ ...props }) {
 	const { methods } = props;
 
@@ -28,13 +30,19 @@ function SelectField({ ...props }) {
 
 	return (
 		<React.Fragment>
-			<label htmlFor="shipping-method">Country</label>
-			<select name="shipping-method" id="shipping-method" onChange={event => handleOnSelect(event)}>
-				<option key="choose" value="choose">
-					-- Country --
-				</option>
-				{shippingMethods}
-			</select>
+			<Wrapper>
+				<Label htmlFor="shipping-method">Country</Label>
+				<Select
+					name="shipping-method"
+					id="shipping-method"
+					onChange={event => handleOnSelect(event)}
+				>
+					<Option key="choose" value="choose">
+						-- Country --
+					</Option>
+					{shippingMethods}
+				</Select>
+			</Wrapper>
 		</React.Fragment>
 	);
 }
