@@ -14,6 +14,7 @@ export const ProductImage = styled.img`
 
 export const ProductHeadline = styled.h1`
 	font-size: 1.2em;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 `;
 
 export const Product = styled.div`
@@ -25,4 +26,5 @@ export const Price = styled.div`
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-top: 2.5em;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 `;
