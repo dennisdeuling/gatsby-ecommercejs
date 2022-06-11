@@ -1,7 +1,7 @@
 import React from 'react';
 
 // components
-import InputField from '../FormFields/InputField/InputField';
+import InputField from '../../InputField/InputField';
 
 function AddressForm({ ...props }) {
 	const handleOnChangeAddress = event => {

@@ -1,8 +1,8 @@
 import React from 'react';
 
 // components
-import Layout from '../../components/Layout/Layout';
-import { Wrapper } from '../../components/Checkout/Checkout/Checkout.styles';
+import Layout from '../../components/Views/Layout/Layout';
+import { Wrapper } from '../../components/Views/Checkout/Checkout/Checkout.styles';
 
 function PurchaseSuccessPage({ location }) {
 	const { order } = location.state;

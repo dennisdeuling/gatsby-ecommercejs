@@ -1,16 +1,17 @@
 import React from 'react';
 
 // helpers
-import { formatPriceEUR } from '../../../helpers/helpers';
+import { formatPriceEUR } from '../../../../helpers/helpers';
 
 // components
 import ProductOverview from './ProductOverview/ProductOverview';
+import LinkButton from '../../../Form/Buttons/LinkButton/LinkButton';
 
 // styled components
 import { CheckoutBtn, Total, Wrapper, WrapperPrice } from './CartOverview.styles';
 
 // hooks
-import { useCart } from '../../../hooks/CartContext';
+import { useCart } from '../../../../hooks/CartContext';
 
 function CartOverview() {
 	const cart = useCart();
@@ -26,7 +27,7 @@ function CartOverview() {
 				<WrapperPrice>
 					<Total>Total: {formatPriceEUR(cart?.subtotal.raw)}</Total>
 				</WrapperPrice>
-				<CheckoutBtn to="/checkout">Checkout</CheckoutBtn>
+				<LinkButton to="/checkout">Checkout</LinkButton>
 			</Wrapper>
 		</React.Fragment>
 	);

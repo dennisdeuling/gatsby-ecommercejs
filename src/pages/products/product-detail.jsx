@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // components
-import Layout from '../../components/Layout/Layout';
-import ProductDetail from '../../components/Products/ProductDetail/ProductDetail';
+import Layout from '../../components/Views/Layout/Layout';
+import ProductDetail from '../../components/Views/Products/ProductDetail/ProductDetail';
 
 function ProductDetailPage({ data }) {
 	const product = data.checProduct;

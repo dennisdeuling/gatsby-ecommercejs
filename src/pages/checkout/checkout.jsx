@@ -6,7 +6,7 @@ import commerce from '../../ecommerce_settings/ecommcejs';
 import stripe from '../../ecommerce_settings/stripe';
 
 // components
-import Checkout from '../../components/Checkout/Checkout/Checkout';
+import Checkout from '../../components/Views/Checkout/Checkout/Checkout';
 
 // context
 import CartProvider from '../../hooks/CartContext';

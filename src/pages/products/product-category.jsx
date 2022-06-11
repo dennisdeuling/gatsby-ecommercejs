@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // components
-import Layout from '../../components/Layout/Layout';
-import ProductList from '../../components/Products/ProductList/ProductList';
+import Layout from '../../components/Views/Layout/Layout';
+import ProductList from '../../components/Views/Products/ProductList/ProductList';
 
 function ProductCategoryPage({ data }) {
 	const products = data.allChecProduct.edges.map(product => product.node);

@@ -7,7 +7,7 @@ import {
 	ProductCardImage,
 	ProductCardWrapper
 } from './ProductCard.styles';
-import { CustomLink } from '../../Link/Link.styles';
+import { CustomLink } from '../../../Link/Link.styles';
 
 function ProductCard(props) {
 	const { image, headline, description, link } = props;

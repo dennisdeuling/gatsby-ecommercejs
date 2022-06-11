@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CustomLink } from '../../Link/Link.styles';
+import { CustomLink } from '../../../Link/Link.styles';
 
 export const Wrapper = styled.div`
 	display: grid;
@@ -25,14 +25,4 @@ export const Total = styled.p`
 	font-weight: bolder;
 	font-size: 2.5em;
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-`;
-
-export const CheckoutBtn = styled(CustomLink)`
-	padding: 10px;
-	background-color: red;
-	border-radius: 15px;
-	color: white;
-	font-weight: bold;
-	font-size: 25px;
-	box-shadow: none;
 `;

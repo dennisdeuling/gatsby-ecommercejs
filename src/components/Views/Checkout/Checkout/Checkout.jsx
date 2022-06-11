@@ -3,12 +3,13 @@ import { navigate } from 'gatsby';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 
 // components
-import AddressForm from './AddressForm/AddressForm';
-import InputField from './FormFields/InputField/InputField';
-import SelectField from './FormFields/SelectField/SelectField';
+import AddressForm from '../../../Form/Checkout/AddressForm/AddressForm';
+import InputField from '../../../Form/InputField/InputField';
+import SelectField from '../../../Form/Checkout/SelectField/SelectField';
+import FormButton from '../../../Form/Buttons/FormButton/FormButton';
 
 // hooks
-import { useCart } from '../../../hooks/CartContext';
+import { useCart } from '../../../../hooks/CartContext';
 
 // styles
 import { Wrapper, Fieldset, Legend } from './Checkout.styles';
@@ -211,8 +212,8 @@ function Checkout({ ...props }) {
 						<Legend>Your Payment:</Legend>
 						<CardElement />
 					</Fieldset>
-					<button type="submit">Order</button>
 				</div>
+				<FormButton type="submit">Order</FormButton>
 			</form>
 		</Wrapper>
 	);

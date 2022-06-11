@@ -10,7 +10,7 @@ import {
 } from './ProductOverview.styles';
 
 // import helpers
-import { formatPriceEUR } from '../../../../helpers/helpers';
+import { formatPriceEUR } from '../../../../../helpers/helpers';
 
 function ProductOverview({ ...props }) {
 	const product = props.product;

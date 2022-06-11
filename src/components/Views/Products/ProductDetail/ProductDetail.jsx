@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 // helper function
-import { formatPriceEUR } from '../../../helpers/helpers';
+import { formatPriceEUR } from '../../../../helpers/helpers';
 
 // components
-import AddToCart from './AddToCartButton/AddToCart';
-import AddQuantity from './AddQuantity/AddQuantity';
+import AddToCart from '../../../Form/ProductDetail/AddToCartButton/AddToCart';
+import AddQuantity from '../../../Form/ProductDetail/AddQuantity/AddQuantity';
 
 // hooks
 // import useCart from '../../../hooks/useCart';
@@ -20,7 +20,7 @@ import {
 	ProductDetailButtons,
 	ProductDetailPrice
 } from './ProductDetail.styles';
-import { useUpdateCart } from '../../../hooks/CartContext';
+import { useUpdateCart } from '../../../../hooks/CartContext';
 
 function ProductDetail({ product }) {
 	const [quantity, setQuantity] = useState();

@@ -5,6 +5,7 @@ export const List = styled.ul`
 	justify-content: center;
 	align-items: center;
 	list-style-type: none;
+	padding: 0 0 0 5px;
 `;
 
 export const ListItem = styled.li`

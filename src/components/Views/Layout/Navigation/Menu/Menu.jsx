@@ -3,14 +3,14 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 // styled components
 import { List, ListItem, Badge } from './Menu.styles';
-import { CustomLink } from '../../../Link/Link.styles';
+import { CustomLink } from '../../../../Link/Link.styles';
 
 // hooks
-import useMenuQuery from '../../../../hooks/useMenuQuery';
-import { useCart } from '../../../../hooks/CartContext';
+import useMenuQuery from '../../../../../hooks/useMenuQuery';
+import { useCart } from '../../../../../hooks/CartContext';
 
 // helper functions
-import { capitalize } from '../../../../helpers/helpers';
+import { capitalize } from '../../../../../helpers/helpers';
 
 function Menu() {
 	const categories = useMenuQuery();
@@ -39,12 +39,12 @@ function Menu() {
 						)}
 						{cart?.line_items.length === 0 ? (
 							<StaticImage
-								src="../../../../assets/icons/empty_shopping_cart_black_24dp.svg"
+								src="../../../../../assets/icons/empty_shopping_cart_black_24dp.svg"
 								alt="Empty shopping-cart"
 							/>
 						) : (
 							<StaticImage
-								src="../../../../assets/icons/filled_shopping_cart_black_24dp.svg"
+								src="../../../../../assets/icons/filled_shopping_cart_black_24dp.svg"
 								alt="Filled shopping-cart"
 							/>
 						)}
