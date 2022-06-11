@@ -14,7 +14,7 @@ export const ListItem = styled.li`
 
 export const Badge = styled.div`
 	position: absolute;
-	top: 30px;
+	top: 38px;
 	padding: 6px;
 	margin: 0 0 30px 10px;
 	background-color: darkorange;
