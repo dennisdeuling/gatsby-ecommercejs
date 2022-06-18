@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import { formatPriceEUR } from '../../../../helpers/helpers';
 
 // components
-import AddToCart from '../../../Form/ProductDetail/AddToCartButton/AddToCart';
 import AddQuantity from '../../../Form/ProductDetail/AddQuantity/AddQuantity';
+import FormButton from '../../../Form/Buttons/FormButton/FormButton';
 
 // hooks
 // import useCart from '../../../hooks/useCart';
@@ -41,7 +41,9 @@ function ProductDetail({ product }) {
 					<ProductDetailPrice>{`${formatPriceEUR(
 						quantity * product.price.raw
 					)}`}</ProductDetailPrice>
-					<AddToCart handleAddToCart={() => handleAddToCart('add', product.id, quantity)} />
+					<FormButton onClick={() => handleAddToCart('add', product.id, quantity)}>
+						Add To Cart
+					</FormButton>
 				</ProductDetailButtons>
 			</ProductDetailTextWrapper>
 		</ProductDetailWrapper>

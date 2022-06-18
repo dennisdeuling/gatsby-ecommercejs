@@ -37,6 +37,13 @@ module.exports = {
 				name: `icons`,
 				path: `${__dirname}/src/assets/icons/`
 			}
+		},
+		{
+			resolve: 'gatsby-plugin-google-tagmanager',
+			options: {
+				id: 'GTM-PRQVJKC',
+				includeInDevelopment: true
+			}
 		}
 	]
 };

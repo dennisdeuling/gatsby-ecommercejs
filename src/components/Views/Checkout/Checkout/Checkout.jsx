@@ -213,7 +213,9 @@ function Checkout({ ...props }) {
 						<CardElement />
 					</Fieldset>
 				</div>
-				<FormButton type="submit">Order</FormButton>
+				<FormButton fullWidth type="submit">
+					Order
+				</FormButton>
 			</form>
 		</Wrapper>
 	);

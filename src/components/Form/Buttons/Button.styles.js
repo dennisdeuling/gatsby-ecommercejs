@@ -7,7 +7,7 @@ export const StyledButton = styled.button`
 	color: white;
 	font-family: Ubuntu, sans-serif;
 	border: none;
-	width: 100%;
+	width: ${props => (props.fullWidth ? '100%' : '50%')};
 	background-color: #f85c70;
 	border-radius: 0.4em;
 	box-shadow: 0 0.5em 1em rgba(228, 61, 64, 0.6), inset 0.1em 0.1em 0.4em #fabec0,

@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // components
-import Layout from '../components/Views/Layout/Layout';
+import Layout from '../components/Views/Layout/Navigation/Layout/Layout';
 import ProductList from '../components/Views/Products/ProductList/ProductList';
 
 function IndexPage({ data }) {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // components
-import Layout from '../../components/Views/Layout/Layout';
+import Layout from '../../components/Views/Layout/Navigation/Layout/Layout';
 import CartOverview from '../../components/Views/Checkout/CartOverview/CartOverview';
 
 function CartOverviewPage() {

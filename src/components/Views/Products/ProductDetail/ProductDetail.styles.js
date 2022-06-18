@@ -82,13 +82,7 @@ export const ProductDetailButtons = styled.div`
 	width: 280px;
 
 	@media (min-width: 768px) {
-		//justify-content: flex-start;
 		width: 380px;
-	}
-
-	@media (min-width: 1024px) {
-		flex-wrap: nowrap;
-		width: 450px;
 	}
 `;
 

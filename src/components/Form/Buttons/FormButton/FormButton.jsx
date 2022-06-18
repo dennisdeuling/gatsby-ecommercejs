@@ -6,7 +6,9 @@ import { StyledButton } from '../Button.styles';
 function FormButton({ children, ...props }) {
 	return (
 		<React.Fragment>
-			<StyledButton type={props ? props.type : 'button'}>{children}</StyledButton>
+			<StyledButton fullWidth onClick={props.onClick} type={props ? props.type : 'button'}>
+				{children}
+			</StyledButton>
 		</React.Fragment>
 	);
 }
