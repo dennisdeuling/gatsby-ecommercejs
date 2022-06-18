@@ -19,7 +19,9 @@ function Menu() {
 	const categoriesList = categories.map(category => {
 		return (
 			<ListItem key={category.id}>
-				<CustomLink to={`/${category.slug}`}>{`${capitalize(category.name)}s`}</CustomLink>
+				<CustomLink to={`/${category.slug}`} color="black">{`${capitalize(
+					category.name
+				)}s`}</CustomLink>
 			</ListItem>
 		);
 	});

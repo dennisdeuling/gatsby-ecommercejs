@@ -60,4 +60,28 @@ exports.createPages = async ({ actions, graphql }) => {
 		component: require.resolve('./src/pages/checkout/purchase-success.jsx'),
 		context: {}
 	});
+
+	actions.createPage({
+		path: `/impressum`,
+		component: require.resolve('./src/pages/footer/impressum.jsx'),
+		context: {}
+	});
+
+	actions.createPage({
+		path: `/agb`,
+		component: require.resolve('./src/pages/footer/agb.jsx'),
+		context: {}
+	});
+
+	actions.createPage({
+		path: `/datenschutz`,
+		component: require.resolve('./src/pages/footer/datenschutz.jsx'),
+		context: {}
+	});
+
+	actions.createPage({
+		path: `/dateneinstellungen`,
+		component: require.resolve('./src/pages/footer/dateneinstellungen.jsx'),
+		context: {}
+	});
 };
