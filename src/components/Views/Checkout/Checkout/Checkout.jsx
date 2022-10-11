@@ -56,7 +56,6 @@ function Checkout({ ...props }) {
 				}
 			};
 		});
-		console.log(method);
 	};
 
 	const handleCheckbox = event => {

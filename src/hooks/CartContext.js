@@ -15,7 +15,12 @@ function CartProvider({ children }) {
 	const [cart, setCart] = useState();
 
 	useEffect(() => {
-		commerce.cart.retrieve().then(cart => setCart(cart));
+		const { pathname } = window.location;
+
+		if(!pathname.includes('purchase')) {
+			commerce.cart.retrieve().then(cart => setCart(cart));
+		}
+
 	}, []);
 
 	const updateContext = (action, id, quantity) => {
