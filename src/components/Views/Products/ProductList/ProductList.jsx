@@ -8,7 +8,6 @@ import { ProductListWrapper } from './ProductList.styles';
 
 function ProductList(props) {
 	const { products } = props;
-	console.log(products)
 
 	const productList = products.map(product => {
 		return (

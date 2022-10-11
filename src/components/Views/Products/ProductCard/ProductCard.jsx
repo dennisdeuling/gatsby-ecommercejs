@@ -17,7 +17,7 @@ function ProductCard(props) {
 			<CustomLink to={`/${link}`} color="black">
 				<ProductCardImage src={image} alt={headline} />
 				<ProductCardHeadline>{headline}</ProductCardHeadline>
-				<ProductCardDescription dangerouslySetInnerHTML={{ __html: description }} />
+				<ProductCardDescription>{description}</ProductCardDescription>
 			</CustomLink>
 		</ProductCardWrapper>
 	);
