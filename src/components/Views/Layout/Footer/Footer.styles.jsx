@@ -6,7 +6,6 @@ export const FooterStyled = styled.footer`
 	align-items: center;
 	background-color: #444041;
 	color: white;
-	margin: 0 -10px -20px -10px;
 	font-size: 1.2em;
 `;
 
@@ -15,7 +14,6 @@ export const List = styled.ul`
 	justify-content: flex-start;
 	align-items: flex-start;
 	list-style: none;
-	margin: 2% 15%;
 `;
 
 export const ListItem = styled.li`

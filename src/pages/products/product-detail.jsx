@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // components
-import Layout from '../../components/Views/Layout/Navigation/Layout/Layout';
+import Layout from '../../components/Views/Layout/Layout/Layout';
 import ProductDetail from '../../components/Views/Products/ProductDetail/ProductDetail';
 
 function ProductDetailPage({ data }) {
@@ -16,7 +16,7 @@ function ProductDetailPage({ data }) {
 }
 
 export const query = graphql`
-	query ($id: String!) {
+	query ($id: String) {
 		checProduct(active: { eq: true }, id: { eq: $id }) {
 			id
 			name

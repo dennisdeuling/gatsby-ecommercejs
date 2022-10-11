@@ -16,7 +16,7 @@ function formatPriceEUR(price) {
 			minimumFractionDigits: 0
 		}).format(price);
 	} else {
-		return 'Please format the price as number';
+		return 'Loading...';
 	}
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // components
-import Layout from '../../components/Views/Layout/Navigation/Layout/Layout';
+import Layout from '../../components/Views/Layout/Layout/Layout';
 import ProductList from '../../components/Views/Products/ProductList/ProductList';
 
 function ProductCategoryPage({ data }) {
@@ -16,7 +16,7 @@ function ProductCategoryPage({ data }) {
 }
 
 export const query = graphql`
-	query ($category: String!) {
+	query ($category: String) {
 		allChecProduct(
 			filter: { active: { eq: true }, categories: { elemMatch: { slug: { eq: $category } } } }
 		) {

@@ -59,8 +59,6 @@ function CartProvider({ children }) {
 		}
 	};
 
-	// console.log(cart);
-
 	return (
 		<CartContext.Provider value={cart}>
 			<CartUpdateContext.Provider value={updateContext}>{children}</CartUpdateContext.Provider>
