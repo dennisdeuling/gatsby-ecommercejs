@@ -9,6 +9,8 @@ import {
 } from './ProductCard.styles';
 import { CustomLink } from '../../../Link/Link.styles';
 
+import {descriptionWithoutHTML} from '../../../../helpers/helpers'
+
 function ProductCard(props) {
 	const { image, headline, description, link } = props;
 
@@ -17,7 +19,7 @@ function ProductCard(props) {
 			<CustomLink to={`/${link}`} color="black">
 				<ProductCardImage src={image} alt={headline} />
 				<ProductCardHeadline>{headline}</ProductCardHeadline>
-				<ProductCardDescription>{description}</ProductCardDescription>
+				<ProductCardDescription>{descriptionWithoutHTML(description)}</ProductCardDescription>
 			</CustomLink>
 		</ProductCardWrapper>
 	);

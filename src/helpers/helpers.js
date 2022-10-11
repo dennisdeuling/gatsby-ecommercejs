@@ -20,4 +20,9 @@ function formatPriceEUR(price) {
 	}
 }
 
-export { capitalize, formatPriceEUR };
+function descriptionWithoutHTML(inputText) {
+	const regEx = /<\/?[^>]*>/gi
+	return inputText.replace(regEx, '');
+}
+
+export { capitalize, formatPriceEUR, descriptionWithoutHTML };
