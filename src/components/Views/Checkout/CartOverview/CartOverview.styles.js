@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { CustomLink } from '../../../Link/Link.styles';
 
 export const Wrapper = styled.div`
 	display: grid;

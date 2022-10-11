@@ -5,7 +5,7 @@ import CartProvider from '../../../../hooks/CartContext';
 
 // components
 import Navigation from '../Navigation/Navigation';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 
 // styles
 import { Main } from './Layout.styles';

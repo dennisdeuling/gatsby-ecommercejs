@@ -8,7 +8,7 @@ import ProductOverview from './ProductOverview/ProductOverview';
 import LinkButton from '../../../Form/Buttons/LinkButton/LinkButton';
 
 // styled components
-import { CheckoutBtn, Total, Wrapper, WrapperPrice } from './CartOverview.styles';
+import { Total, Wrapper, WrapperPrice } from './CartOverview.styles';
 
 // hooks
 import { useCart } from '../../../../hooks/CartContext';

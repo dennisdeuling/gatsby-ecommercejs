@@ -1,4 +1,3 @@
-import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function useMenuQuery() {
@@ -14,8 +13,7 @@ function useMenuQuery() {
 		}
 	`);
 
-	const category = data.allChecCategory.nodes;
-	return category;
+	return data.allChecCategory.nodes;
 }
 
 export default useMenuQuery;
