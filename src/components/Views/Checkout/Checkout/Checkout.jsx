@@ -179,7 +179,6 @@ function Checkout({ ...props }) {
 		<Wrapper>
 			<form onSubmit={event => captureOrder(event)}>
 				<div>
-					<h1>Addresses</h1>
 					<Fieldset>
 						<Legend>Your Billing address:</Legend>
 						<AddressForm handleOnChangeAddress={handleOnChangeAddress} typeOfAddress="billing" />
